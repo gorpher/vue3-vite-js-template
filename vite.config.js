@@ -19,9 +19,9 @@ export default ({ command, mode }) => {
 
   const rollupOptions = {
     output: {
-      entryFileNames: `gva/gin-vue-admin-[name].${timestamp}.js`,
-      chunkFileNames: `js/gin-vue-admin-[name].${timestamp}.js`,
-      assetFileNames: `assets/gin-vue-admin-[name].${timestamp}.[ext]`,
+      entryFileNames: `main-[name].${timestamp}.js`,
+      chunkFileNames: `main-chunk-[name].${timestamp}.js`,
+      assetFileNames: `assets/main-[name].${timestamp}.[ext]`,
     },
   }
 
@@ -78,7 +78,7 @@ export default ({ command, mode }) => {
         ],
       }),
       vuePlugin(),
-      [Banner(`\n Build based on gin-vue-admin \n Time : ${timestamp}`)],
+      [Banner(`\n Build based on vue3 project \n Time : ${timestamp}`)],
     ],
     css: {
       preprocessorOptions: {
